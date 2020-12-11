@@ -15,6 +15,7 @@
         "pantheon-systems/drupal-integrations": "^9",
         "drush/drush": "^10",
         "cweagans/composer-patches": "^1.0",
-        "zaporylie/composer-drupal-optimizations": "^1.2"
+        "zaporylie/composer-drupal-optimizations": "^1.2",
+        "drupal/redirect": "1.5"
     }
 }
