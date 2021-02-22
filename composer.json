@@ -1,6 +1,6 @@
 {
     "name": "pantheon-upstreams/drupal-project",
-    "description": "Install Drupal 9 with Composer on Pantheon.",
+    "description": "Install Drupal (drops-8) with Composer on Pantheon.",
     "type": "project",
     "license": "MIT",
     "repositories": [
@@ -14,20 +14,22 @@
         }
     ],
     "require": {
-        "pantheon-upstreams/upstream-configuration": "*"
+        "drupal/honeypot": "^2.0",
+        "drupal/metatag": "^1.12",
+        "internal/upstream-configuration": "*"
     },
     "conflict": {
             "drupal/drupal": "*"
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "prefer-stable": true,
     "extra": {
         "installer-paths": {
             "web/core": ["type:drupal-core"],
             "web/libraries/{$name}": ["type:drupal-library"],
-            "web/modules/composer/{$name}": ["type:drupal-module"],
-            "web/profiles/composer/{$name}": ["type:drupal-profile"],
-            "web/themes/composer/{$name}": ["type:drupal-theme"],
+            "web/modules/contrib/{$name}": ["type:drupal-module"],
+            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
+            "web/themes/contrib/{$name}": ["type:drupal-theme"],
             "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
             "web/private/scripts/quicksilver/{$name}/": ["type:quicksilver-script"]
         },
@@ -44,8 +46,7 @@
             },
             "file-mapping": {
                 "[project-root]/.editorconfig": false,
-                "[project-root]/pantheon.upstream.yml": false,
-                "[project-root]/.gitattributes": false
+                "[project-root]/pantheon.upstream.yml": false
             }
         }
     },
@@ -54,7 +55,8 @@
         "preferred-install": "dist",
         "sort-packages": true,
         "platform": {
-            "php": "7.4"
+            "php": "7.0.8"
         }
-    }
+    },
+    "version": "1.0.0"
 }
