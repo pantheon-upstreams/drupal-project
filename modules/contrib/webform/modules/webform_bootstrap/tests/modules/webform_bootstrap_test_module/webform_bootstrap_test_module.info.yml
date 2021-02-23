@@ -1,0 +1,14 @@
+name: 'Webform Test Bootstrap Helper'
+type: module
+description: 'Suport module for webform bootstrap integration testing.'
+package: 'Webform Testing'
+core_version_requirement: ^8.8
+dependencies:
+  - 'styleguide:styleguide'
+  - 'webform:webform'
+  - 'webform:webform_bootstrap'
+
+# Information added by Drupal.org packaging script on 2021-02-04
+version: '8.x-5.24'
+project: 'webform'
+datestamp: 1612453182

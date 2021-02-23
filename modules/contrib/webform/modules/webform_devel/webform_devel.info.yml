@@ -1,0 +1,13 @@
+name: 'Webform Devel'
+type: module
+description: 'Provides development tools for the Webform module.'
+package: Webform
+core_version_requirement: ^8.8
+dependencies:
+  - 'devel:devel'
+  - 'webform:webform'
+
+# Information added by Drupal.org packaging script on 2021-02-04
+version: '8.x-5.24'
+project: 'webform'
+datestamp: 1612453182

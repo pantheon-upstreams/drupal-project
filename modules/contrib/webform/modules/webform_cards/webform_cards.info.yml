@@ -1,0 +1,14 @@
+name: 'Webform Cards'
+type: module
+description: 'Provides a ''Card'' container element for fast clientside multistep form pagination.'
+package: 'Webform'
+core_version_requirement: ^8.8
+dependencies:
+  - 'webform:webform'
+  - 'webform:webform_clientside_validation'
+  - 'drupal:inline_form_errors'
+
+# Information added by Drupal.org packaging script on 2021-02-04
+version: '8.x-5.24'
+project: 'webform'
+datestamp: 1612453182

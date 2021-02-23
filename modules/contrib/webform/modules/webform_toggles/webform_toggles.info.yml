@@ -1,0 +1,12 @@
+name: 'Webform Toggles'
+type: module
+description: 'Provides a webform element for toggling a single on/off state. The Toogles library is not being maintained and has major accessibility issues.'
+package: 'Webform [DEPRECATED]'
+core_version_requirement: ^8.8
+dependencies:
+  - 'webform:webform'
+
+# Information added by Drupal.org packaging script on 2021-02-04
+version: '8.x-5.24'
+project: 'webform'
+datestamp: 1612453181

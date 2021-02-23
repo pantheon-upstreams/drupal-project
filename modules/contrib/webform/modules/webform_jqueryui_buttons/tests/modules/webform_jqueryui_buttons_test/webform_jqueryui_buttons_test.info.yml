@@ -1,0 +1,12 @@
+name: 'Webform jQueryUI Buttons test'
+type: module
+description: 'Support module for jQuery UI buttons element testing.'
+package: 'Webform Testing'
+core_version_requirement: ^8.8
+dependencies:
+  - 'webform:webform_jqueryui_buttons'
+
+# Information added by Drupal.org packaging script on 2021-02-04
+version: '8.x-5.24'
+project: 'webform'
+datestamp: 1612453182
