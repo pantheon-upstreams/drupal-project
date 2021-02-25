@@ -465,14 +465,6 @@ class WebformAddonsManager implements WebformAddonsManagerInterface {
       'category' => 'enhancement',
     ];
 
-    // Enhancement: Webform Paragraphs.
-    $projects['webform_paragraphs'] = [
-      'title' => $this->t('Webform Paragraphs'),
-      'description' => $this->t('Adds a paragraph reference to the webforms when they are submitted from a paragraph context.'),
-      'url' => Url::fromUri('https://www.drupal.org/project/webform_paragraphs'),
-      'category' => 'enhancement',
-    ];
-
     // Enhancement: Webform Pre-populate.
     $projects['webform_prepopulate'] = [
       'title' => $this->t('Webform Pre-populate'),
@@ -701,7 +693,7 @@ class WebformAddonsManager implements WebformAddonsManagerInterface {
     // Integrations: Sharpspring Webforms.
     $projects['sharpspring_webforms'] = [
       'title' => $this->t('Sharpspring Webforms'),
-      'description' => $this->t("Extends the SharpSpring module's functionality to add SharpSpring lead tracking to Webforms."),
+      'description' => $this->t('Extends the SharpSpring module\'s functionality to add SharpSpring lead tracking to Webforms.'),
       'url' => Url::fromUri('https://www.drupal.org/project/sharpspring_webforms'),
       'category' => 'integration',
     ];

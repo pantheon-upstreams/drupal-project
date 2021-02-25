@@ -26,7 +26,7 @@
           $(this).bind('autocompleteselect', function (event, ui) {
             if (ui.item) {
               $(this).val(ui.item.value);
-              $(this.form).trigger('submit');
+              this.form.trigger('submit');
             }
           });
         });

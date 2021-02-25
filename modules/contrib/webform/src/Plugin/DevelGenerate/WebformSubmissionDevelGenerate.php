@@ -29,7 +29,7 @@ class WebformSubmissionDevelGenerate extends DevelGenerateBase implements Contai
   /**
    * {@inheritdoc}
    */
-  public function validateDrushParams($args) {
+  public function validateDrushParams(array $args, array $options = []) {
     return $this->_validateDrushParams($args);
   }
 

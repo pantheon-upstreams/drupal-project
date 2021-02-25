@@ -3039,13 +3039,6 @@ class WebformSubmissionForm extends ContentEntityForm {
     if ($this->operation === 'api') {
       return FALSE;
     }
-
-    // Disable Ajax if the form has its #method set to 'get'.
-    $elements = $this->getWebform()->getElementsInitialized();
-    if (isset($elements['#method']) && $elements['#method'] === 'get') {
-      return FALSE;
-    }
-
     return $this->getWebformSetting('ajax', FALSE);
   }
 

@@ -15,8 +15,8 @@
   /**
    * Scroll to top ajax command.
    *
-   * @param {Element} element
-   *   The element to scroll to.
+   * @param element
+   *
    * @param {string} target
    *   Scroll to target. (form or page)
    */
@@ -59,14 +59,14 @@
   /**
    * Scroll element into view.
    *
-   * @param {jQuery} $element
+   * @param {Element} element
    *   An element.
    */
-  Drupal.webformScrolledIntoView = function ($element) {
+  Drupal.webformScrolledIntoView = function($element) {
     if (!Drupal.webformIsScrolledIntoView($element)) {
       $('html, body').animate({scrollTop: $element.offset().top - Drupal.webform.scrollTopOffset}, 500);
     }
-  };
+  }
 
   /**
    * Determine if element is visible in the viewport.
@@ -79,7 +79,7 @@
    *
    * @see https://stackoverflow.com/questions/487073/check-if-element-is-visible-after-scrolling
    */
-  Drupal.webformIsScrolledIntoView = function (element) {
+  Drupal.webformIsScrolledIntoView = function(element) {
     var docViewTop = $(window).scrollTop();
     var docViewBottom = docViewTop + $(window).height();
 
@@ -87,6 +87,6 @@
     var elemBottom = elemTop + $(element).height();
 
     return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-  };
+  }
 
 })(jQuery, Drupal);

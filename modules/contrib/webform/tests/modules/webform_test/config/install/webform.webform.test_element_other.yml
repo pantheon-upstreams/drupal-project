@@ -63,14 +63,6 @@ elements: |
         - One
         - Two
         - Four
-    select_other_zero:
-      '#type': webform_select_other
-      '#title': 'Select other zero'
-      '#options':
-        One: One
-        Two: Two
-        Three: Three
-      '#default_value': 0
   checkboxes_other:
     '#type': details
     '#title': 'Checkboxes other (checkboxes_other)'
@@ -157,7 +149,7 @@ elements: |
         Two: Two
         Three: Three
       '#wrapper_type': container
-
+  
 css: ''
 javascript: ''
 settings:

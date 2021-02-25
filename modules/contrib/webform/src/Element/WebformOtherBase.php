@@ -328,7 +328,7 @@ abstract class WebformOtherBase extends FormElement {
   protected static function convertDefaultValueToElementValue(array $element) {
     $type = str_replace('webform_', '', static::$type);
 
-    $default_value = isset($element['#default_value']) && $element['#default_value'] !== '' ? $element['#default_value'] : NULL;
+    $default_value = isset($element['#default_value']) ? $element['#default_value'] : NULL;
     if (static::isMultiple($element)) {
       // Handle edge case where $default_value is not an array.
       if (!is_array($default_value)) {
@@ -347,7 +347,7 @@ abstract class WebformOtherBase extends FormElement {
       return [$type => $default_options, 'other' => NULL];
     }
     else {
-      if ($default_value !== NULL && !WebformOptionsHelper::hasOption($default_value, $element['#options'])) {
+      if (!empty($default_value) && !WebformOptionsHelper::hasOption($default_value, $element['#options'])) {
         return [$type => static::OTHER_OPTION, 'other' => $default_value];
       }
 

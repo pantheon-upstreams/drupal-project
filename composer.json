@@ -22,7 +22,7 @@
         "drupal/core-vendor-hardening": "^8.8",
         "drupal/pathauto": "1.7",
         "drupal/token": "1.7",
-        "drupal/webform": "^5.23"
+        "drupal/webform": "5.23"
     },
     "conflict": {
         "drupal/drupal": "*"

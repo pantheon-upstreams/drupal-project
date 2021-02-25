@@ -30,7 +30,6 @@ class WebformLikert extends FormElement {
       ],
       '#theme_wrappers' => ['form_element'],
       '#required' => FALSE,
-      '#required_error' => '',
       '#sticky' => TRUE,
       '#questions' => [],
       '#questions_description_display' => 'description',
@@ -319,14 +318,7 @@ class WebformLikert extends FormElement {
     $value = $element['#value'];
     foreach ($element['#questions'] as $question_key => $question_title) {
       if (is_null($value[$question_key])) {
-        $question_element =& $element['table'][$question_key]['likert_question'];
-        $t_args = ['@name' => $question_title];
-        if (!empty($element['#required_error'])) {
-          $form_state->setError($question_element, new FormattableMarkup($element['#required_error'], $t_args));
-        }
-        else {
-          $form_state->setError($question_element, t('@name field is required.', $t_args));
-        }
+        $form_state->setError($element['table'][$question_key]['likert_question'], t('@name field is required.', ['@name' => $question_title]));
       }
     }
   }

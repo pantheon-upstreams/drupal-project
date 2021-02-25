@@ -3,7 +3,6 @@
  * Webform clientside validation styles.
  */
 
-.form-item.js-form-type-tel + strong.error.form-item--error-message,
-.form-item.js-form-type-tel + strong.error.form-item--error-message + strong.error.form-item--error-message {
-  margin-top: -1em;
+.webform-submission-form strong.error.form-item--error-message {
+  display: block;
 }

@@ -406,9 +406,6 @@ class WebformLikert extends WebformElementBase {
    */
   public function form(array $form, FormStateInterface $form_state) {
     $form = parent::form($form, $form_state);
-
-    $form['validation']['required_container']['required_error']['#description'] = $this->t('If set, this message will be used when a required likert question is empty, instead of the default "X field is required." message. To include the question title in the required message, please include the @name placeholder in the required message.');
-
     $form['likert'] = [
       '#type' => 'fieldset',
       '#title' => $this->t('Likert settings'),

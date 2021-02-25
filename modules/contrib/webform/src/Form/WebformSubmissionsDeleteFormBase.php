@@ -228,7 +228,7 @@ abstract class WebformSubmissionsDeleteFormBase extends WebformDeleteFormBase {
    * @param array $operations
    *   An array of function calls (not used in this function).
    */
-  public function batchFinish($success = FALSE, array $results = [], array $operations = []) {
+  public function batchFinish($success = FALSE, array $results, array $operations) {
     if (!$success) {
       $this->messenger()->addStatus($this->t('Finished with an error.'));
     }

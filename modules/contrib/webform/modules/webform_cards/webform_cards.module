@@ -325,13 +325,7 @@ function webform_cards_form_webform_admin_config_forms_form_alter(array &$form, 
         '#title' => t('Default wizard/cards start label'),
       ],
       'default_wizard_confirmation_label' => [
-        '#title' => t('Default wizard/cards end label'),
-      ],
-      'default_wizard_toggle_show_label' => [
-        '#title' => t('Default wizard/cards show all elements label'),
-      ],
-      'default_wizard_toggle_hide_label' => [
-        '#title' => t('Default wizard/cards hide all elements label'),
+        '#title' => t('Default/cards wizard end label'),
       ],
     ],
   ]);

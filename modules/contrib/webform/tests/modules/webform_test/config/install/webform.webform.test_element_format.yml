@@ -497,15 +497,15 @@ elements: |
         '#title': 'Image select (Value)'
         '#show_label': true
         '#images':
-          dog_1:
-            text: 'Dog 1'
-            src: 'https://www.placedog.net/80/100'
-          dog_2:
-            text: 'Dog 2'
-            src: 'https://www.placedog.net/100/100'
-          dog_3:
-            text: 'Dog 3'
-            src: 'https://www.placedog.net/120/100'
+          bear_1:
+            text: 'Bear 1'
+            src: 'https://www.placebear.com/80/100'
+          bear_2:
+            text: 'Bear 2'
+            src: 'https://www.placebear.com/100/100'
+          bear_3:
+            text: 'Bear 3'
+            src: 'https://www.placebear.com/120/100'
         '#default_value': Loremipsum
         '#format': value
       webform_image_select_raw:
@@ -513,15 +513,15 @@ elements: |
         '#title': 'Image select (Raw value)'
         '#show_label': true
         '#images':
-          dog_1:
-            text: 'Dog 1'
-            src: 'https://www.placedog.net/80/100'
-          dog_2:
-            text: 'Dog 2'
-            src: 'https://www.placedog.net/100/100'
-          dog_3:
-            text: 'Dog 3'
-            src: 'https://www.placedog.net/120/100'
+          bear_1:
+            text: 'Bear 1'
+            src: 'https://www.placebear.com/80/100'
+          bear_2:
+            text: 'Bear 2'
+            src: 'https://www.placebear.com/100/100'
+          bear_3:
+            text: 'Bear 3'
+            src: 'https://www.placebear.com/120/100'
         '#default_value': Loremipsum
         '#format': raw
       webform_image_select_image:
@@ -529,15 +529,15 @@ elements: |
         '#title': 'Image select (Image)'
         '#show_label': true
         '#images':
-          dog_1:
-            text: 'Dog 1'
-            src: 'https://www.placedog.net/80/100'
-          dog_2:
-            text: 'Dog 2'
-            src: 'https://www.placedog.net/100/100'
-          dog_3:
-            text: 'Dog 3'
-            src: 'https://www.placedog.net/120/100'
+          bear_1:
+            text: 'Bear 1'
+            src: 'https://www.placebear.com/80/100'
+          bear_2:
+            text: 'Bear 2'
+            src: 'https://www.placebear.com/100/100'
+          bear_3:
+            text: 'Bear 3'
+            src: 'https://www.placebear.com/120/100'
         '#default_value': Loremipsum
         '#format': image
     radios:
@@ -1305,7 +1305,7 @@ elements: |
         '#title': 'Machine name (Raw value)'
         '#default_value': loremipsum
         '#format': raw
-
+  
 css: ''
 javascript: ''
 settings:

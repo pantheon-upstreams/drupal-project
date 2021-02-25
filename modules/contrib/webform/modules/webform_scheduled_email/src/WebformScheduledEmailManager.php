@@ -473,7 +473,6 @@ class WebformScheduledEmailManager implements WebformScheduledEmailManagerInterf
       WebformScheduledEmailManagerInterface::EMAIL_RESCHEDULED => $this->t('rescheduled'),
       WebformScheduledEmailManagerInterface::EMAIL_ALREADY_SCHEDULED => $this->t('already scheduled'),
       WebformScheduledEmailManagerInterface::EMAIL_UNSCHEDULED => $this->t('unscheduled'),
-      WebformScheduledEmailManagerInterface::EMAIL_IGNORED => $this->t('ignored'),
       WebformScheduledEmailManagerInterface::EMAIL_SENT => $this->t('sent'),
       WebformScheduledEmailManagerInterface::EMAIL_NOT_SENT => $this->t('not sent'),
       WebformScheduledEmailManagerInterface::EMAIL_SKIPPED => $this->t('skipped'),
@@ -523,7 +522,6 @@ class WebformScheduledEmailManager implements WebformScheduledEmailManagerInterf
       WebformScheduledEmailManagerInterface::EMAIL_RESCHEDULED => 0,
       WebformScheduledEmailManagerInterface::EMAIL_UNSCHEDULED => 0,
       WebformScheduledEmailManagerInterface::EMAIL_ALREADY_SCHEDULED => 0,
-      WebformScheduledEmailManagerInterface::EMAIL_IGNORED => 0,
     ];
 
     if (empty($limit)) {

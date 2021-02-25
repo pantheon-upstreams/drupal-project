@@ -225,10 +225,6 @@ class ScheduleEmailWebformHandler extends EmailWebformHandler {
         '#title' => $this->t('Schedule emails for all existing submissions'),
         '#description' => $this->t('Check schedule emails after submissions have been processed.'),
         '#return_value' => TRUE,
-        // Must specify #parents because 'queue' is not a configuration setting.
-        // @see \Drupal\webform_scheduled_email\Plugin\WebformHandler\ScheduleEmailWebformHandler::defaultConfiguration
-        // @see \Drupal\webform\Plugin\WebformHandlerBase::setSettingsParentsRecursively
-        '#parents' => ['settings', 'queue'],
       ];
       $form['scheduled']['queue_message'] = [
         '#type' => 'webform_message',

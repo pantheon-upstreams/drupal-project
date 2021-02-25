@@ -57,16 +57,16 @@ kitten_4:
 
     $dogs = Yaml::decode("dog_1:
   text: 'Cute Dog 1'
-  src: 'http://placedog.net/220/200'
+  src: 'http://placedog.com/220/200'
 dog_2:
   text: 'Cute Dog 2'
-  src: 'http://placedog.net/180/200'
+  src: 'http://placedog.com/180/200'
 dog_3:
   text: 'Cute Dog 3'
-  src: 'http://placedog.net/130/200'
+  src: 'http://placedog.com/130/200'
 dog_4:
   text: 'Cute Dog 4'
-  src: 'http://placedog.net/270/200'");
+  src: 'http://placedog.com/270/200'");
 
     // Check get element images for manually defined images.
     $element = ['#images' => $dogs];
@@ -115,7 +115,7 @@ dog_4:
     $element = ['#images' => 'animals'];
     $images = WebformImageSelectImages::getElementImages($element);
     $this->debug($images);
-    $this->assertEqual(array_keys($images), ['kitten_1', 'kitten_2', 'kitten_3', 'kitten_4', 'dog_1', 'dog_2', 'dog_3', 'dog_4']);
+    $this->assertEqual(array_keys($images), ['kitten_1', 'kitten_2', 'kitten_3', 'kitten_4', 'bear_1', 'bear_2', 'bear_3', 'bear_4']);
   }
 
 }

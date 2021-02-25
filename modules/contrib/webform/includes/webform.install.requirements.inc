@@ -20,6 +20,25 @@ function webform_requirements($phase) {
   $requirements = [];
 
   /****************************************************************************/
+  // Contrib modules.
+  /****************************************************************************/
+
+  // Memcache API and Integration 2.2 regression.
+  if (\Drupal::moduleHandler()->moduleExists('memcache')) {
+    $info = \Drupal::service('extension.list.module')->getExtensionInfo('memcache');
+    if ($info['version'] === '8.x-2.2') {
+      $requirements['webform_memcache'] = [
+        'title' => t('Webform: Memcache API and Integration 2.2'),
+        'value' => t('Memcache API and Integration 2.2 is causing unexpected regressions for the Webform module. Please consider downgrading to <a href=":memcache_href">Memcache API and Integration 2.1 and following <a href=":issue_href">Issue #3176519: Uploaded files not linking correctly in emails sent through Webform module after upgrading to memcache 2.2</a>.', [
+          ':memcache_href' => 'https://www.drupal.org/project/memcache/releases/8.x-2.1',
+          ':issue_href' => 'https://www.drupal.org/project/memcache/issues/3176519',
+        ]),
+        'severity' => REQUIREMENT_ERROR,
+      ];
+    }
+  }
+
+  /****************************************************************************/
   // Experimental modules.
   /****************************************************************************/
 
@@ -123,18 +142,14 @@ function webform_requirements($phase) {
       if (\Drupal::moduleHandler()->moduleExists('webform_bootstrap')) {
         $requirements['webform_bootstrap'] = [
           'title' => t('Webform: Bootstrap integration'),
-          'value' => t('Webform Bootstrap sub-module installed.'),
+          'value' => t('Webform Bootstrap module installed.'),
         ];
       }
       else {
-        $t_args = [
-          ':install_href' => Url::fromRoute('system.modules_list')->toString(),
-          ':disable_href' => Url::fromRoute('webform.config.advanced')->toString(),
-        ];
         $requirements['webform_bootstrap'] = [
           'title' => t('Webform: Bootstrap integration'),
-          'value' => t('Webform Bootstrap Integration sub-module not installed.'),
-          'description' => t('The <a href=":install_href">Webform Bootstrap sub-module</a> helps support Webform to Bootstrap integration. <a href=":disable_href">Disable Webform Bootstrap Integration warning</a>', $t_args),
+          'value' => t('Webform Bootstrap Integration module not installed.'),
+          'description' => t('The Webform Bootstrap module helps support Webform to Bootstrap integration. <a href=":href">Disable Webform Bootstrap Integration warning</a>', [':href' => Url::fromRoute('webform.config.advanced')->toString()]),
           'severity' => REQUIREMENT_WARNING,
         ];
       }

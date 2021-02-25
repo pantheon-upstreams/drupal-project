@@ -43,7 +43,7 @@
           toggleShowLabel: $form.data('toggle-show-label'),
           ajaxEffect: $form.data('ajax-effect'),
           ajaxSpeed: $form.data('ajax-speed'),
-          ajaxScrollTop: $form.data('ajax-scroll-top')
+          ajaxScrollTop: $form.data('ajax-scroll-top'),
         };
 
         var currentPage = $form.data('current-page');
@@ -138,8 +138,8 @@
             // If input and the cursor is not at the end of the input, do not
             // trigger navigation.
             // @see https://stackoverflow.com/questions/21177489/selectionstart-selectionend-on-input-type-number-no-longer-allowed-in-chrome
-            if (typeof event.target.value !== 'undefined'
-              && typeof event.target.selectionStart !== 'undefined'
+            if (event.target.value !== undefined
+              && event.target.selectionStart !== undefined
               && event.target.selectionStart !== null) {
               if (event.target.value.length !== event.target.selectionStart) {
                 return;
@@ -373,7 +373,7 @@
           // Set properties.
           var properties = getCardsProgressProperties();
           for (var property in properties) {
-            if (properties.hasOwnProperty(property)) {
+            if (propertie.hasOwnProperty(value)) {
               var attribute = '[data-webform-progress-' + property + ']';
               var value = properties[property];
               $progress.find(attribute).html(value);

@@ -31,7 +31,6 @@ elements: |
     '#type': webform_likert
     '#title': likert_advanced
     '#required': true
-    '#required_error': '{custom error for @name}'
     '#na_answer': true
     '#na_answer_value': N/A
     '#na_answer_text': 'Not applicable'
@@ -80,7 +79,7 @@ elements: |
       - 'Option 1'
       - 'Option 2'
       - 'Option 3'
-
+  
 css: ''
 javascript: ''
 settings:
