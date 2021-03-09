@@ -1,60 +1,86 @@
 {
-    "name": "pantheon-upstreams/drupal-project",
-    "description": "Install Drupal 9 with Composer on Pantheon.",
-    "type": "project",
-    "license": "MIT",
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://packages.drupal.org/8"
-        },
-        {
-            "type": "path",
-            "url": "upstream-configuration"
-        }
-    ],
-    "require": {
-        "pantheon-upstreams/upstream-configuration": "*",
-        "drush/drush": "^10"
+  "name": "pantheon-upstreams/drupal-project",
+  "description": "Install Drupal 9 with Composer on Pantheon.",
+  "type": "project",
+  "license": "MIT",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
     },
-    "conflict": {
-            "drupal/drupal": "*"
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "extra": {
-        "installer-paths": {
-            "web/core": ["type:drupal-core"],
-            "web/libraries/{$name}": ["type:drupal-library"],
-            "web/modules/composer/{$name}": ["type:drupal-module"],
-            "web/profiles/composer/{$name}": ["type:drupal-profile"],
-            "web/themes/composer/{$name}": ["type:drupal-theme"],
-            "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
-            "web/private/scripts/quicksilver/{$name}/": ["type:quicksilver-script"]
-        },
-        "composer-exit-on-patch-failure": true,
-        "patchLevel": {
-            "drupal/core": "-p2"
-        },
-        "drupal-scaffold": {
-            "allowed-packages": [
-                "pantheon-systems/drupal-integrations"
-            ],
-            "locations": {
-                "web-root": "./web"
-            },
-            "file-mapping": {
-                "[project-root]/.editorconfig": false,
-                "[project-root]/pantheon.upstream.yml": false,
-                "[project-root]/.gitattributes": false
-            }
-        }
-    },
-    "config": {
-        "preferred-install": "dist",
-        "sort-packages": true,
-        "platform": {
-            "php": "7.4"
-        }
+    {
+      "type": "path",
+      "url": "upstream-configuration"
     }
+  ],
+  "require": {
+    "pantheon-upstreams/upstream-configuration": "*",
+    "drush/drush": "^10",
+    "composer/installers": "^1.9"
+  },
+  "conflict": {
+    "drupal/drupal": "*"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "extra": {
+    "installer-types": [
+      "bower-asset",
+      "npm-asset",
+      "drupal-drush",
+      "drupal-theme",
+      "drupal-profile",
+      "drupal-module",
+      "drupal-core"
+    ],
+    "installer-paths": {
+      "web/core": [
+        "type:drupal-core"
+      ],
+      "web/libraries/{$name}": [
+        "type:drupal-library",
+        "type:bower-asset",
+        "type:npm-asset"
+      ],
+      "web/modules/composer/{$name}": [
+        "type:drupal-module"
+      ],
+      "web/profiles/composer/{$name}": [
+        "type:drupal-profile"
+      ],
+      "web/themes/composer/{$name}": [
+        "type:drupal-theme"
+      ],
+      "drush/Commands/contrib/{$name}": [
+        "type:drupal-drush"
+      ],
+      "web/private/scripts/quicksilver/{$name}/": [
+        "type:quicksilver-script"
+      ]
+    },
+    "composer-exit-on-patch-failure": true,
+    "patchLevel": {
+      "drupal/core": "-p2"
+    },
+    "drupal-scaffold": {
+      "allowed-packages": [
+        "pantheon-systems/drupal-integrations"
+      ],
+      "locations": {
+        "web-root": "./web"
+      },
+      "file-mapping": {
+        "[project-root]/.editorconfig": false,
+        "[project-root]/pantheon.upstream.yml": false,
+        "[project-root]/.gitattributes": false
+      }
+    }
+  },
+  "config": {
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "platform": {
+      "php": "7.4"
+    }
+  }
 }
