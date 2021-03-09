@@ -121,6 +121,7 @@ upstream/web/
 /web/sites/example.sites.php
 /web/themes/README.txt
 /.drush-lock-update
+/backup-*-composer.json
 
 # Other common rules
 # ------------------
