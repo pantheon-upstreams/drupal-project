@@ -2,11 +2,16 @@
 <?php
 
 $help_text = <<<EOT
+ *******************************************************************************
+ * THIS SCRIPT IS IN ALPHA VERSION STATUS AND AT THIS POINT HAS VERY LITTLE    *
+ * ERROR CHECKING. PLEASE USE AT YOUR OWN RISK.                                *
+ *******************************************************************************
  * This script searches for every {modulename}.info.yml. If that file has a    *
  * "project" proerty (i.e. it's been thru the automated services at            *
  * drupal.org), it records that property and version number and ensures        *
  * those values are in the composer.json "require" array. Your old composer    *
- * file will re renamed backup-*-composaer.json.                               *
+ * file will re renamed backup-*-composer.json.                                *
+ *******************************************************************************
 EOT;
 
 function progressBar($done, $total) {
@@ -17,11 +22,12 @@ function progressBar($done, $total) {
 }
 
 
+
 echo $help_text . PHP_EOL;
 
 $regex = '/(\.info\.yml|\.info\.yaml?)/';
 
-$allFiles = iterator_to_array(new RecursiveIteratorIterator(new RecursiveDirectoryIterator(getcwd())));
+$allFiles = iterator_to_array(new RecursiveIteratorIterator(new RecursiveDirectoryIterator(getcwd() . "/OLDSITE")));
 
 $max = count($allFiles);
 $current = 0;
