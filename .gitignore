@@ -97,6 +97,7 @@ upstream/web/
 /web/.editorconfig
 /web/.eslintignore
 /web/.eslintrc.json
+/web/.gitignore
 /web/.gitattributes
 /web/.ht.router.php
 /web/.htaccess
